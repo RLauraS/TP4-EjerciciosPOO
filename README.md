@@ -9,7 +9,7 @@ Trabajo práctico de JavaScript con ejercicios de programación orientada a obje
 1. Desde la terminal de su preferencia posicionarse en la carpeta donde desee que se haga la copia de este repositorio
 2. Escribir el siguiente comando:
 ```
-git clone https://github.com/RLauraS/TP2-EjerciciosJavascript.git
+git clone https://github.com/RLauraS/TP4-EjerciciosPOO.git
 ```
 ### ¿Cómo probar los ejercicios? 📋
 

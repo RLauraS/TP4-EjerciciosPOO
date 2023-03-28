@@ -141,6 +141,7 @@ while (!salir) {
         const telefono = prompt("Teléfono del contacto:");
         const contacto = new Contacto(nombre, telefono);
         agenda.aniadirContacto(contacto);
+        //listarContactos();
         break;
 
       case "2":

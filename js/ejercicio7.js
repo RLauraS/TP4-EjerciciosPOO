@@ -56,16 +56,19 @@ class Agenda {
   aniadirContacto(contacto) {
     if (this.#contactos.length === this.#tamaño) {
       document.write("La agenda está llena, no se puede añadir más contactos.<br>");
+      console.log("La agenda está llena, no se puede añadir más contactos.");
       return;
     }
 
     if (this.existeContacto(contacto)) {
       document.write("El contacto ya existe en la agenda.<br>");
+      console.log("El contacto ya existe en la agenda.");
       return;
     }
 
     this.#contactos.push(contacto);
     document.write(`El contacto ${contacto.nombre} ha sido añadido a la agenda.<br>`);
+    console.log(`El contacto ${contacto.nombre} ha sido añadido a la agenda.`);
     this.listarContactos();
   }
 
@@ -76,6 +79,7 @@ class Agenda {
 
   listarContactos() {
     document.write("Agenda de contactos:<br>");
+    console.log("Agenda de contactos:");
     this.#contactos.forEach((c) => document.write(`${c.nombre}: ${c.telefono}<br>`));
   }
 
@@ -83,8 +87,10 @@ class Agenda {
     const contacto = this.#contactos.find((c) => c.nombre === nombre);
     if (contacto) {
       document.write(`Teléfono de ${contacto.nombre}: ${contacto.telefono}<br>`);
+      console.log(`Teléfono de ${contacto.nombre}: ${contacto.telefono}`);
     } else {
       document.write(`El contacto ${nombre} no existe en la agenda.<br>`);
+      console.log(`El contacto ${nombre} no existe en la agenda.`);
     }
   }
 
@@ -92,11 +98,13 @@ class Agenda {
     const indice = this.#contactos.findIndex((c) => c.nombre === nombre);
     if (indice === -1) {
       document.write("El contacto no existe en la agenda.<br>");
+      console.log("El contacto no existe en la agenda.");
       return false;
     }
 
     this.#contactos.splice(indice, 1);
     document.write("El contacto ha sido eliminado de la agenda.<br>");
+    console.log("El contacto ha sido eliminado de la agenda.");
     return true;
 }
 
@@ -161,6 +169,7 @@ while (!salir) {
 
       default:
         document.write("Opción no válida.<br>");
+        console.log("Opción no válida.<br>");
         break;
     }
   }

@@ -81,7 +81,9 @@ class Agenda {
     document.write("Agenda de contactos:<br>");
     console.log("Agenda de contactos:");
     this.#contactos.forEach((c) => document.write(`${c.nombre}: ${c.telefono}<br>`));
+    this.#contactos.forEach((c) => console.log(`${c.nombre}: ${c.telefono}`));
   }
+  
 
   buscarContacto(nombre) {
     const contacto = this.#contactos.find((c) => c.nombre === nombre);
@@ -125,7 +127,6 @@ class Agenda {
   }
 }
 
-// Ejemplo de uso:
 const agenda = new Agenda();
 
 let salir = false;
@@ -140,7 +141,7 @@ while (!salir) {
   
   if (opcion === null || opcion === "5") {
     document.write("¡Hasta luego!<br>");
-    salir = true; // establecer la condición de salida
+    salir = true;
     break;
   }else {
     switch (opcion) {
